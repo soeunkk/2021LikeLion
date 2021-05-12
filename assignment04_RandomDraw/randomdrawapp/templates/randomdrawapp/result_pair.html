@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>짝꿍 추첨 결과</title>
+        <style type="text/css">
+            html {
+                width: 100%;
+                height: 100%
+            }
+            body {
+                width: fit-content;
+                margin: 0 auto;
+                text-align: center;
+            }
+            main {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 300px;
+                height: 400px;
+                margin-left: -150px;
+                margin-top: -250px;
+                text-align: center;
+            }
+            #result {
+                padding: 30px;
+            }
+            .item {
+                padding: 0.3rem 0;
+                font-size: 1.3rem;
+            }
+            button {
+                width: 100%;
+            }
+            footer {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                font-size: 1rem;
+                text-align: center;
+            }
+        </style>
+    <body>
+        <main>
+            <h2>🎉짝꿍 추첨 결과🎉</h2> 
+
+            <div id="result">
+                <div class="item">🦁{{pair_1}}</div>
+                <div class="item">🦁{{pair_2}}</div>
+                <div class="item">🦁{{pair_3}}</div>
+                <div class="item">🦁{{pair_4}}</div>
+                <div class="item">🦁{{pair_5}}</div>
+                <div class="item">🦁{{pair_6}}</div>
+                <div class="item">🦁{{pair_7}}</div>
+                <div class="item">🦁{{pair_8}}</div>
+            </div>
+
+            <a href="{% url 'home' %}"><button>돌아가기</button></a>
+        </main>
+
+        <footer><div>Copyright 2021. Soeun Kim, all rights reserved</div></footer>
+    </body>
+</html>
