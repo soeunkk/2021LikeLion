@@ -15,10 +15,16 @@ SOOKMYUNG LIKELION
 * 3주차-**Django**(4/26)  
   Django 프레임워크와 MTV 디자인 패턴 개념  
   + 과제: Codecademy HTML, CSS 100% 수강 및 Django를 이용한 자기소개 페이지  
-   자기소개 페이지 과제물: <https://github.com/soeunkk/likelion_week3.git>  
+   자기소개 페이지 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment03_IntroduceSelf>  
   
 * 4주차-**랜덤모듈**(5/4)  
   랜덤 모듈을 이용한 로또 프로그램 실습  
   팀별로 아이디어 도출 및 목업 구상 후 발표 [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week04/%EB%AA%A9%EC%97%85(PPT)_SookTemp.pdf)  
   + 과제: 랜덤 모듈을 이용한 짝꿍 뽑기 프로그램  
-   짝꿍 뽑기 프로그램 과제물: <https://github.com/soeunkk/likelion_week4.git>  
+   짝꿍 뽑기 프로그램 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment04_RandomDraw>  
+   
+* 5주차-**Django Model**(5/4)  
+  model 사용법, admin 페이지, path converter, get_object_or_404
+  Model을 이용한 일기장 실습  
+  + 과제: Django의 Model을 이용한 일기장  
+   일기장 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment05_Diary>  
