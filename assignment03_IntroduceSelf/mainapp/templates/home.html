@@ -1,0 +1,117 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="shortcut icon" type="image⁄x-icon" href="{%static 'img/likelion_logo.png' %}">
+        <title>자기소개 페이지</title>
+        <link href="{%static 'css/home.css' %}" rel="stylesheet"/>
+    </head>
+    <body>
+        <header>
+            <div class="blackBG"></div>
+
+            <h2 class="neon">SOEUN</h2>
+            <img class="myface" src="{%static 'img/me1.jpg' %}" />
+            <a href="https://github.com/soeunkk" target="_blank"><img class="icon clickable" src="{%static 'img/github_icon.png' %}" /></a>
+            <a href="mailto:luckyber1@naver.com"><img class="icon clickable" src="{%static 'img/email_icon.png' %}" title="luckyber1@naver.com"/></a>
+            <!--tel은 나중에 클립보드 복사 기능 추가-->
+            <img class="icon clickable" src="{%static 'img/tel_icon.png' %}" title="010-3539-6185" />
+
+            <div id="content-menu">
+                <p class="title">About Me</p>
+                <a href="#identity"><span class="element item1">#자기소개</span></a>
+                <a href="#roomescape"><span class="element item2">#취미생활1_방탈출</span></a>
+                <a href="#theater"><span class="element item3">#취미생활2_연극</span></a>
+                <a href="#history"><span class="element item4">#History</span></a>
+                <a href="./question.html"><span class="element item5">#무엇이든_물어보세요</span></a>
+            </div>
+
+            <div id="background-music">
+                <audio src="{%static 'audio/Trip.mp3' %}" autoplay loop controls></audio>
+                <pre>배경음악: Leellamarz-Trip</pre>
+            </div>
+        </header>
+
+        <div id="content">
+            <div id="identity" class="height_fix content-item">
+                <h2>자기소개</h2>
+                <p><span class="key">이&nbsp;&nbsp;&nbsp;름</span> <span class="value">김소은</span></p>
+                <p><span class="key">생&nbsp;&nbsp;&nbsp;일</span> <span class="value">1999-12-02 (23살)</p>
+                <p><span class="key">거주지</span> <span class="value">서울 강북구</span></p>
+                <p><span class="key">학&nbsp;&nbsp;&nbsp;교</span> <span class="value">숙명여자대학교</span></p>
+                <p><span class="key">전&nbsp;&nbsp;&nbsp;공</span> <span class="value">IT공학과</span></p>
+            </div>
+
+            <div id="roomescape" class="height_fix content-item">
+                <h2>취미생활1 방탈출</h2>
+                <div class="container">
+                    <div class="container-wrapper">
+                        <img class="photo" src="{%static 'img/roomescape1.jpg' %}"/>
+                        <img class="photo" src="{%static 'img/roomescape2.jpg' %}"/>
+                        <img class="photo" src="{%static 'img/roomescape3.jpg' %}"/>
+                    </div>
+                </div>
+                <p>
+                    방탈출하는 것을 엄청 좋아해서 방탈출하러 인천으로 2박3일 여행간 적도 있어요!<br>
+                    혹시 멋사 회원분들 중에 방탈출 좋아하시는 분 있으시면 같이해요..💙
+                </p>
+            </div>
+
+            <div id="theater" class="height_fix content-item">
+                <h2>취미생활2 연극</h2>
+                <div class="container">
+                    <div class="container-wrapper">
+                        <img class="photo" src="{%static 'img/theater1.jpg' %}"/>
+                        <img class="photo" src="{%static 'img/theater2.jpg' %}"/>  
+                        <img class="photo" src="{%static 'img/theater3.jpg' %}"/>
+                    </div>
+                </div>
+                <p>
+                    대학로 근처에 살다보니 친구랑 자주 연극보러 가고 심심하면 혼자 예매해서 보기도 해요.
+                </p>
+            </div>
+
+            <div id="history" class="height_fix content-item">
+                <h2>History</h2>
+                <div class="history-line"></div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2021.03~</span><br>
+                    <span class="what">'멋쟁이사자처럼'</span><br></p>
+                </div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2021.03~</span><br>
+                    <span class="what">숙명여자대학교 휴학</span><br></p>
+                </div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2019.09~</span><br>
+                    <span class="what">교육봉사동아리 '아름'</span><br></p>
+                </div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2019.03~2019.12</span><br>
+                    <span class="what">IT공학과 학회 '코딧'</span><br></p>
+                </div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2019.01~2019.12</span><br>
+                    <span class="what">IT공학과 학생회 'For IT'</span><br></p>
+                </div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2018.03~</span><br>
+                    <span class="what">숙명여자대학교 IT공학과</span><br></p>
+                </div>
+                <div class="element">
+                    <img class="list-icon " src="{%static 'img/list_icon.png' %}" />
+                    <p><span class="period">2015.03~2018.02</span><br>
+                    <span class="what"n>서울사범대학부설고등학교</span><br></p>
+                </div>
+            </div>
+        </div>
+        <footer><div>Copyright 2021. Soeun Kim, all rights reserved</div></footer>
+    </body>
+</html>

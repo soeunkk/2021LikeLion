@@ -1,0 +1,243 @@
+/* 로컬 폰트 적용 */
+@font-face {
+    font-family: 'arittaDotum';
+    src: url('../font/ArittaDotum-Medium.ttf') format('truetype')
+}
+
+body {
+    background-color: black;
+    min-width: 1000px;
+    min-height: 700px;
+    font-family: 'arittaDotum';
+}
+.title {
+    font-size: 18px;
+    font-weight: bold;
+}
+.clickable:hover {
+    opacity:0.5;
+}
+.clickable:active {
+    opacity: 0.3;
+}
+
+/* header */
+header {
+    height: 180px;
+}
+header .blackBG {
+    background-color: black;
+    height: 120px;
+    position: fixed;
+    top: 0;
+    left:0;
+    right: 0;
+    z-index: 10;
+}
+header .myface {
+    width: 130px;
+    height: 130px;
+    position: fixed;
+    margin: 0 auto;
+    top: 50px;
+    left: 0;
+    right: 0;
+    border-radius: 100%;
+    filter: drop-shadow(3px 3px 3px #3e3e3e);
+    z-index: 10;
+}
+header h2 {
+    position: fixed;
+    margin: -10px auto 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 35px;
+    z-index: 10;
+}
+header .icon {
+    width: 25px;
+    height: 25px;
+    position: relative;
+    top: 70px;
+    right: -90%;
+    padding: 0px 5px;
+    z-index: 10;
+}
+/* header content-menu */
+#content-menu .title {
+    position: fixed;
+    top: 40px;
+    left: 50px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 10;
+}
+#content-menu .element {
+    position: fixed;
+    top: 90px;
+    color: white;
+    padding: 0px 10px;
+    text-align: center;
+    z-index: 10;
+}
+#content-menu .element:hover {
+    color: #E99990;
+}
+#content-menu .item1 { left: 40px; }
+#content-menu .item2 { left: 125px; }
+#content-menu .item3 { left: 270px; }
+#content-menu .item4 { left: 400px; }
+#content-menu .item5 { left: 475px; }
+/* header background-music */
+#background-music {
+    position: fixed;
+    top: 10px;
+    right: 3%;
+    z-index: 10;
+}
+#background-music audio {
+    width: 250px;
+    height: 30px;
+}
+#background-music pre {
+    font-family: 'arittaDotum';   
+    color: #8B9298;
+    text-align: center;
+    margin-top: 2px;
+    margin-left: 5px;
+}
+
+/* content */
+#content {
+    box-sizing: border-box;
+    background-color:white;
+    width: 95%;
+    margin: -90px auto 30px;
+    padding: 105px 10px 0;
+    min-width: 900px;
+    min-height: 570px;
+}
+#content .height_fix {
+    margin-top: -200px;
+    padding-top: 200px;
+}
+#content h2 {
+    text-align: center;
+    margin-bottom: 50px;
+    
+}
+#content .container {
+    position: relative;
+    display:table;
+    width:100%;
+    height: 100%;
+}
+#content .container-wrapper {
+    display: table-cell;
+    margin:auto;
+    text-align:center;
+    font-size:0;
+    width:90%;
+    height:90%;
+    vertical-align:middle;
+}
+#content .photo {
+    display: inline-block;
+    height:300px;
+    width:300px;
+    border-radius:10px;
+    margin: 5px 5px 20px;
+    z-index: 1;
+}
+#content .content-item {
+    padding-bottom: 100px;
+}
+
+/* identity */
+#identity {
+    width: fit-content;
+    margin: 0 auto;
+}
+#identity .key {
+    display: block;
+    float: left;
+    width: 50px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* roomescape, theater */
+#roomescape p, #theater p {
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* history */
+#history {
+    width: 20%;
+    margin: 0 auto;
+    min-width: 170px;
+    background-color: white;
+}
+#history .history-line {
+    float: left;
+    width: 2px;
+    height: 370px;
+    background-color: #595959;
+    margin-left: 60px;
+    margin-right: 15px;
+    margin-top: 5px;
+}
+#history .element {
+    height: 35px;
+}
+#history .list-icon {
+    margin-left: -19px;
+    margin-top: 5px;
+    width: 6px;
+    height: 6px;
+    float: left;
+}
+#history .element p {
+    padding-left: 80px;
+}
+#history .period {
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+#history .what {
+    font-size: 12px;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    color: lightgray;
+    font-size: 13px;
+}
+
+/* 네온 효과 */
+.neon {
+    font-family: neon !important; 
+    color: #FB4264;
+    text-shadow: 0 0 #F40A35;
+
+    animation: neon 2s linear infinite;
+    -moz-animation: neon 2s linear infinite;
+    -webkit-animation: neon 2s linear infinite;
+    -o-animation: neon 2s linear infinite;
+}
+@keyframes neon {
+    0%,
+    100% {
+        text-shadow: 0 0 6px #FA1C16, 0 0 18px #FA1C16, 0 0 60px #FA1C16, 0 0 30px #FA1C16, 0 0 .24px #FED128, .30px .30px .6px #806914;
+        color: #FED128;
+    }
+    50% {
+        text-shadow: 0 0 3px #800E0B, 0 0 9px #800E0B, 0 0 30px #800E0B, 0 0 30px #800E0B, 0 0 .12px #800E0B, .30px .30px .6px #40340A;
+        color: #806914;
+    }
+}
