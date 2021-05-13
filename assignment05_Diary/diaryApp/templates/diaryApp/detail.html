@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>일기장 세부 내용</title>
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+        <style type="text/css">
+            html {
+                width: 100%;
+                height: 100%;
+                background-color: burlywood;
+            }
+            body {
+                width: fit-content;
+                height: 90%;
+                margin: 0 auto;
+                padding-bottom: 25px;
+            }
+            main {
+                width: fit-content;
+                min-height: 70%;
+                background-color: white;
+                margin-top: 3%;
+                margin-left: 15%;
+                margin-bottom: 3%;
+                margin-right: 15%;
+                padding: 20px;
+                border-radius: 20px;
+                font-family: 'Nanum Pen Script', cursive;
+            }
+            #diary-header {
+                width: 100%;
+                text-align: center;
+                font-size: 2.5rem;
+                color: burlywood;
+            }
+            #diary-header .highlight {
+                font-size: 3rem;
+                color: black;
+            }
+            main hr {
+                margin-bottom: 50px;
+                border-style: solid;
+                border-width: 1.5px;
+                border-color: lightgray;
+                background-color: lightgray;
+            }
+            #diary-body {
+                padding-left: 10%;
+                padding-right: 10%;
+                font-size: 2rem;
+                line-height: 200%;
+                text-decoration: underline;
+                text-decoration-color: lightgray;
+                text-decoration-style: wavy;
+                text-underline-position: under;
+                
+            }
+            footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 25px;
+                font-size: 1rem;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <main>
+            <div id="diary-header">
+                <span class="highlight">{{ diary.pub_date|date:"Y" }}</span>&nbsp;년&nbsp;&nbsp;&nbsp;
+                <span class="highlight">{{ diary.pub_date|date:"m" }}</span>&nbsp;월&nbsp;&nbsp;&nbsp;
+                <span class="highlight">{{ diary.pub_date|date:"d" }}</span>&nbsp;일&nbsp;&nbsp;&nbsp;
+                <span class="highlight">{{ diary.weekday }}</span>&nbsp;요일&nbsp;&nbsp;&nbsp;
+                <span class="highlight">{{ diary.pub_date|date:"H" }}</span>&nbsp;시&nbsp;
+                <span class="highlight">{{ diary.pub_date|date:"i" }}</span>&nbsp;분&nbsp;&nbsp;&nbsp;
+                <br>
+                제목: <span class="highlight">{{ diary.title }}</span>
+            </div>
+            <hr>
+            <div id="diary-body">
+                {{ diary.body }}
+            </div>
+
+        </main>
+        
+        <footer><div>Copyright 2021. Soeun Kim, all rights reserved</div></footer>
+    </body>
+</html>

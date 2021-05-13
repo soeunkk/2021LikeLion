@@ -22,8 +22,8 @@ SOOKMYUNG LIKELION
   팀별로 아이디어 도출 및 목업 구상 후 발표 [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week04/%EB%AA%A9%EC%97%85(PPT)_SookTemp.pdf)  
   + 과제: 랜덤 모듈을 이용한 짝꿍 뽑기 프로그램  
    짝꿍 뽑기 프로그램 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment04_RandomDraw>  
-   
-* 5주차-**Django Model**(5/4)  
+  
+* 5주차-**Django Model**(5/11)  
   model 사용법, admin 페이지, path converter, get_object_or_404
   Model을 이용한 일기장 실습  
   + 과제: Django의 Model을 이용한 일기장  
