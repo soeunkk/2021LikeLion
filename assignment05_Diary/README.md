@@ -6,9 +6,8 @@ model을 이용하여 데이터베이스에 저장된 데이터를 웹페이지�
 
 ![diary2](./forREADME/diary2.png)  
 ![diary1](./forREADME/diary1.png)  
-datetimefield에서 원하는 데이터만 추출하여 일기장의 날짜를 출력합니다.<br><br>
+path converter를 통해 여러 개의 일기 데이터를 하나의 html로 표현할 수 있습니다.<br><br>
 
 기능  
-- Django Model 이용  
-- path converter  
-- 최신 일기 순으로 정렬  
+- Django Model 사용  
+- path converter   
