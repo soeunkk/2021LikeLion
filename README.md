@@ -26,5 +26,15 @@ SOOKMYUNG LIKELION
 * 5주차-**Django Model**(5/11)  
   model 사용법, admin 페이지, path converter, get_object_or_404
   Model을 이용한 일기장 실습  
+  
   + 과제: Django의 Model을 이용한 일기장  
-   일기장 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment05_Diary>  
+   일기장 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment05_Diary>    
+  
+* 6주차-**회원가입, 로그인**(5/18)  
+  Auth, redirect VS render, {% block %}  
+  
+  + 과제1: 5주차 일기장 과제에 회원가입, 로그인 기능 추가  
+  기능 추가된 일기장 과제물: <https://github.com/soeunkk/2021LikeLion/tree/master/assignment06_Diary2>  
+
+  + 과제2: 아이디어톤을 위한 3분 PT 준비 [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week06)
+
