@@ -1,0 +1,28 @@
+main {
+    width: fit-content;
+    background-color: white;
+    margin: 150px auto 0px;
+    padding: 20px 100px 60px;
+    border-radius: 20px;
+    clear: right;
+}
+#loginForm {
+    font-size: 1.5rem;
+}
+#loginForm .element {
+    margin-bottom: 20px;
+}
+#loginForm label[for="username"] {
+    width: 100px;
+    padding: 0 30px;
+}
+#loginForm input[type="text"], #loginForm input[type="password"] {
+    line-height: normal;
+    padding: 5px 15px;
+    width: 200px;
+    border-style: solid;
+    border-radius: 10px;
+}
+#loginForm input[type="submit"] {
+    float: right;
+}

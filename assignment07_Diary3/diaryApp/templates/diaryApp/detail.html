@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link href="{% static 'detail.css' %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main>
+    <div id="diary-header">
+        <span class="highlight">{{ diary.pub_date|date:"Y" }}</span>&nbsp;년&nbsp;&nbsp;&nbsp;
+        <span class="highlight">{{ diary.pub_date|date:"m" }}</span>&nbsp;월&nbsp;&nbsp;&nbsp;
+        <span class="highlight">{{ diary.pub_date|date:"d" }}</span>&nbsp;일&nbsp;&nbsp;&nbsp;
+        <span class="highlight">{{ diary.weekday }}</span>&nbsp;요일&nbsp;&nbsp;&nbsp;
+        <span class="highlight">{{ diary.pub_date|date:"H" }}</span>&nbsp;시&nbsp;
+        <span class="highlight">{{ diary.pub_date|date:"i" }}</span>&nbsp;분&nbsp;&nbsp;&nbsp;
+        <br>
+        제목: <span class="highlight">{{ diary.title }}</span>
+    </div>
+    <hr>
+    {% if diary.img %}
+    <img id="diary-image" src="{{diary.img.url}}" alt="diary image"/>
+    {% endif %}
+
+    <div id="diary-body">{{ diary.body }}</div>
+</main>
+{% endblock %}

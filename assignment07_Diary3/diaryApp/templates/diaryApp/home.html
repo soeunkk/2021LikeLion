@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link href="{% static 'home.css' %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<main>
+    <!--최신 글 순으로 정렬(dictsort: 오름차순, dictsortreversed: 내림차순)-->
+    {% for diary in diaries.all|dictsortreversed:"pub_date" %}
+    <div class="diary">
+        <span class="title">{{ diary.title }}</span><br>
+        <span class="summary">{{ diary.summary }}...<a class="hover-translucent" href="{% url 'detail' diary.id %}">더보기</a></span><br>
+        <img class="translucent" src="https://img.icons8.com/material-sharp/24/000000/planner.png"/>
+        <!--날짜 형식: 5/13(목) 04:42-->
+        <span class="date translucent">{{ diary.pub_date|date:"m/d("}}{{ diary.weekday }}{{ diary.pub_date|date:") H:i" }}</span>
+        <hr>
+    </div>
+    {% endfor %}
+</main>
+{% else %}
+<div class="warning">❗ contents를 보려면 로그인이 필요합니다.</div>
+{% endif %}
+{% endblock %}
