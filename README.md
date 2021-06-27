@@ -41,11 +41,11 @@ SOOKMYUNG LIKELION
 * 7주차-**아이디어톤 팀 빌딩**(5/25)  
   선정된 아이디어: 1) 질병 검색 서비스, 2) 약속 시간• 장소 추천 서비스, 3) 개발자 취업정보 제공 서비스, 4) 자취 정보 관련 서비스   
   
-  + 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion)  
+  + 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week08/Meet%20Wizard%20%EB%AA%A9%EC%97%85%2C%20%ED%85%8C%EC%9D%B4%EB%B8%94.pdf)  
 
 * 8주차-**bootstrap, static, media**(5/18)    
   static, media를 이용한 정적 파일 관리  
   
   + 과제1: 6주차 일기장 과제에 static, media 적용  
-  기능 추가된 일기장 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment07_Diary3)  
+  기능 추가된 일기장 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment08_Diary3)  
 
