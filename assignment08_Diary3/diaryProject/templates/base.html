@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Diary</title>
+        <link rel="shortcut icon" type="image⁄x-icon" href="https://img.icons8.com/cute-clipart/64/000000/calendar-12.png">
+        <!--Google Font-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Gamja+Flower&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+        <link href="{% static 'base.css' %}" type="text/css" rel="stylesheet">
+        {% block style %}
+        {% endblock %}
+
+        {% if error %}
+        <script>
+            alert("{{ error }}");
+        </script>
+        {% endif %}
+    </head>
+    <body>
+        <header>
+            <a class="link-normal hover-translucent" href="{% url 'home' %}">일기장</a>
+        </header>
+
+        <nav>
+            {% if user.is_authenticated %}
+                {{ user.username }}님, 환영합니다!
+                <a href="{% url 'logout' %}"><input type="button" value="로그아웃"></a>
+            {% else %}
+                <a href="{% url 'login' %}"><input type="button" value="로그인"></a>
+                /
+                <a href="{% url 'signup' %}"><input type="button" value="회원가입"></a>
+            {% endif %}
+        </nav>
+
+        {% block content %}
+        {% endblock %}
+
+        <footer><div>Copyright 2021. Soeun Kim, all rights reserved</div></footer>
+    </body>
+</html>

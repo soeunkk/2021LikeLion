@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link href="{% static 'signup.css' %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h1>Sign Up!</h1>
+    <form id="signupForm" method="POST" action="{% url 'signup' %}">
+        {% csrf_token %}
+        <div class="element">
+            <label for="username">ID <span class="essential">*</span></label><br>
+            <input name="username" type="text" value="" placeholder="아이디를 입력해주세요"/>
+        </div>
+        <div class="element">
+            <label for="email">E-mail <span class="essential">*</span></label><br>
+            <input name="email" type="text" value="" placeholder="이메일을 입력해주세요"/>
+        </div>
+        <div class="element">
+            <label for="password1">Password <span class="essential">*</span></label><br>
+            <input name="password1" type="password" value="" placeholder="비밀번호를 입력해주세요">
+        </div>
+        <div class="element">
+            <label for="password2">Confirm Password <span class="essential">*</span></label><br>
+            <input name="password2" type="password" value="" placeholder="비밀번호를 한 번 더 입력해주세요">
+        </div>
+        <div class="element">
+            <input type="submit" value="회원가입">
+        </div>
+    </form>
+</main>
+{% endblock %}

@@ -1,0 +1,28 @@
+main {
+    width: fit-content;
+    background-color: white;
+    margin: 5% auto 0px;
+    padding: 20px 100px 60px;
+    border-radius: 20px;
+    clear: right;
+}
+#signupForm {
+    font-size: 1.5rem;
+}
+#signupForm .element {
+    margin-bottom: 20px;
+}
+#signupForm input[type="text"], #signupForm input[type="password"] {
+    line-height: normal;
+    padding: 5px 10px;
+    width: 200px;
+    border-style: solid;
+    border-radius: 10px;
+}
+#signupForm input[type="submit"] {
+    float: right;
+}
+.essential {
+    font-size: 1.4rem;
+    color: red;
+}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link href="{% static 'login.css' %}" type="text/css" rel="stylesheet">
+{% endblock %}
+
+{% block content %}
+<main>
+    <h1>Login!</h1>
+
+    <form id="loginForm" method="POST" action="{% url 'login' %}">
+        {% csrf_token %}
+        <label for="username">ID</label>
+        <input name="username" type="text" value="" placeholder="아이디를 입력해주세요"/>
+        <br><br>
+
+        <label for="password">Password</label>
+        <input name="password" type="password" value="" placeholder="비밀번호를 입력해주세요">
+        <br><br>
+        
+        <input type="submit" value="Login"/>
+    </form>
+</main>
+{% endblock %}
