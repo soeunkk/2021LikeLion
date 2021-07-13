@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'crudapp/css/detail.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div id="title">
+    <h2>상세 리뷰 <small>📝</small></h2>
+</div>
+
+<div id="btn_groups"class="d-flex justify-content-end">
+    <a href="{% url 'postupdate' review.id %}"><button type="button" class="btn btn-secondary">수정하기</button></a>
+    <a href="{% url 'postdelete' review.id %}" onclick="return confirm('정말 삭제하시겠습니까?');"><button type="button" class="btn btn-danger">삭제하기</button></a>
+
+</div>
+
+<div class="description">
+    <div class="review_content">
+        {% if review.food_image %}
+        <img class="food_image" src="{{ review.food_image.url }}"/>
+        {% endif %}
+
+        <div class="food_description">
+            <span class="restaurant">{{ review.restaurant }}</span>
+            <span class="food_menu"> - {{ review.food }}</span>
+            <div class="rating">별점: 
+                {% if review.rating == 5 %}
+                <small>⭐⭐⭐⭐⭐</small>
+                {% elif review.rating == 4 %}
+                <small>⭐⭐⭐⭐</small>
+                {% elif review.rating == 3 %}
+                <small>⭐⭐⭐</small>
+                {% elif review.rating == 2 %}
+                <small>⭐⭐</small>
+                {% elif review.rating == 1 %}
+                <small>⭐</small>
+                {% endif %}
+            </div>
+            <p class="review_content">{{ review.review }}</p>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

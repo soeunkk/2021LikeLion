@@ -1,0 +1,41 @@
+#title h2 {
+    text-align: center;
+    padding: 30 0 30 0;
+}
+.description {
+    height: 500px;
+    background-color: #E0A800;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+.food_image{
+    float: left;
+    border:solid #fff;
+    border-width:6px 6px 20px 6px;
+    box-shadow:1px 1px 5px #333; 
+    -webkit-box-shadow:1px 1px 5px #333;
+    -moz-box-shadow:1px 1px 5px #333;
+    height:400px;
+    width:400px;
+    margin: 50 50 50 0;
+}
+.food_description {
+    padding: 70 50 50 50;
+    color: #fff;
+    font-size: 2rem;
+}
+.restaurant {
+    font-weight: bold;
+}
+.food_menu {
+    font-size: 1.8rem;
+}
+.rating {
+    font-size: 1.5rem;
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+.review_content {
+    font-size: 1.5rem;
+}
