@@ -65,4 +65,4 @@ SOOKMYUNG LIKELION
 
   * 과제2: 댓글 수정/삭제 기능 구현
 
-    기능 추가된 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment10_CRUDProject)
+    기능 추가된 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment10_CRUDProject2)
