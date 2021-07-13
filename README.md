@@ -61,7 +61,7 @@ SOOKMYUNG LIKELION
 
 * 10주차-**댓글**    
 
-  * 과제1: {{form}}의 다양한 형태 서버로 확인 [📝]()   
+  * 과제1: {{form}}의 다양한 형태 서버로 확인 [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week10/%EB%8B%A4%EC%96%91%ED%95%9C_form%ED%98%95%ED%83%9C.pdf)   
 
   * 과제2: 댓글 수정/삭제 기능 구현
 
