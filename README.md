@@ -45,7 +45,24 @@ SOOKMYUNG LIKELION
 
 * 8주차-**bootstrap, static, media**(5/18)    
   static, media를 이용한 정적 파일 관리  
-  
-  + 과제1: 6주차 일기장 과제에 static, media 적용  
-  기능 추가된 일기장 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment08_Diary3)  
 
+  + 과제: 6주차 일기장 과제에 static, media 적용  
+    기능 추가된 일기장 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment08_Diary3)          
+
+* 9주차-**CRUD**      
+
+  * 멋사 중앙 아이디어톤      
+
+    https://www.youtube.com/watch?v=Aa78owNMhX8      
+
+  * 과제: crud 기능을 구현한 자유 프로젝트     
+
+    음식점 리뷰를 남기는 웹, 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment09_CRUDProject)
+
+* 10주차-**댓글**    
+
+  * 과제1: {{form}}의 다양한 형태 서버로 확인 [📝]()   
+
+  * 과제2: 댓글 수정/삭제 기능 구현
+
+    기능 추가된 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment10_CRUDProject)
