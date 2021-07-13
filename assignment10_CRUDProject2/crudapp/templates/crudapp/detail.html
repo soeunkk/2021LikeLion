@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'crudapp/css/detail.css' %}"/>
+{% endblock %}
+
+{% block content %}
+
+<div id="title">
+    <h2>상세 리뷰 <small>📝</small></h2>
+</div>
+
+<div id="btn_groups"class="d-flex justify-content-end">
+    <a href="{% url 'reviewupdate' review.id %}"><button type="button" class="btn btn-secondary">수정하기</button></a>
+    <a href="{% url 'reviewdelete' review.id %}" onclick="return confirm('정말 삭제하시겠습니까?');"><button type="button" class="btn btn-danger">삭제하기</button></a>
+</div>
+
+<div class="description">
+    <div class="review_content">
+        {% if review.food_image %}
+        <img class="food_image" src="{{ review.food_image.url }}"/>
+        {% endif %}
+
+        <div class="food_description">
+            <span class="restaurant">{{ review.restaurant }}</span>
+            <span class="food_menu"> - {{ review.food }}</span>
+            <div class="rating">별점: 
+                {% if review.rating == 5 %}
+                <small>⭐⭐⭐⭐⭐</small>
+                {% elif review.rating == 4 %}
+                <small>⭐⭐⭐⭐</small>
+                {% elif review.rating == 3 %}
+                <small>⭐⭐⭐</small>
+                {% elif review.rating == 2 %}
+                <small>⭐⭐</small>
+                {% elif review.rating == 1 %}
+                <small>⭐</small>
+                {% endif %}
+            </div>
+            <p class="review_content">{{ review.review }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="comment">
+    <div class="item">
+        <h4>댓글</h4>
+        <form id="comment_create_form" method='POST'>
+            {% csrf_token %}
+            {{form}}
+            <button type="submit" class="btn btn-secondary">댓글 등록</button>
+        </form>
+    </div>
+
+    <div class="item comment_list">
+    {% for comment in review.comment_set.all|dictsortreversed:"created_at" %}
+        {% if edit_form and edit_form_id == comment.id %}
+        <hr/>
+        <form id="comment_update_form" method='POST'>
+            {% csrf_token %}
+            {{edit_form}}
+            <button type="submit" class="btn btn-secondary">댓글 수정</button>
+        </form>
+        {% else %}
+        <hr/>
+        <span class="content">{{ comment.content }}</span>
+        <span class="created_at">{{ comment.created_at|date:"Y" }}-{{comment.created_at|date:"m" }}-{{comment.created_at|date:"d" }}&nbsp;&nbsp;{{comment.created_at|date:"H" }}:{{comment.created_at|date:"i" }}:{{comment.created_at|date:"s" }}</span>
+        <br>
+        <div class="comment_btn_groups">
+            <span class="comment_update_btn" onclick="location.href='{% url 'commentupdate' comment.id %}'">수정</span>
+            &nbsp;|&nbsp;
+            <span class="comment_delete_btn" onclick="location.href='{% url 'commentdelete' comment.id %}'">삭제</span>
+        </div>
+        {% endif %}
+    {% endfor %}
+        <hr/>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript">
+    //댓글 쓰는 폼의 input에 placeholder 설정
+    inputEle = document.getElementsByName("content")[0]
+    inputEle.placeholder = "댓글을 입력해주세요.";
+</script>
+{% endblock %}

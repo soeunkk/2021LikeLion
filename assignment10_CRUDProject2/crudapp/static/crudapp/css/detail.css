@@ -1,0 +1,82 @@
+#title h2 {
+    text-align: center;
+    padding: 30 0 30 0;
+}
+#btn_groups button {
+    margin: 0 10 10 0;
+}
+.description {
+    height: 400px;
+    background-color: #E0A800;
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
+.food_image{
+    float: left;
+    border:solid #fff;
+    border-width:6px 6px 20px 6px;
+    box-shadow:1px 1px 5px #333; 
+    -webkit-box-shadow:1px 1px 5px #333;
+    -moz-box-shadow:1px 1px 5px #333;
+    height:300px;
+    width:300px;
+    margin: 50 50 50 0;
+}
+.food_description {
+    padding: 70 50 50 50;
+    color: #fff;
+    font-size: 1.8rem;
+}
+.restaurant {
+    font-weight: bold;
+}
+.food_menu {
+    font-size: 1.6rem;
+}
+.rating {
+    font-size: 1.4rem;
+    margin-top: 3px;
+    margin-bottom: 30px;
+}
+.review_content {
+    font-size: 1.3rem;
+}
+.comment {
+    margin: 30 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+}
+.comment .item {
+    width: fit-content;
+    min-width: 500px;
+}
+.comment h4 {
+    margin-bottom: 20px;
+}
+#comment_create_form [for="id_content"], #comment_update_form [for="id_content"] {
+    display: none;
+}
+#comment_create_form [name="content"], #comment_update_form [name="content"] {
+    padding: 5 10;
+    margin-left: 5px;
+    width: 430px;
+}
+.comment_list .content {
+    float: left;
+}
+.comment_list .created_at {
+    float: right;
+    color: #999;
+}
+.comment_btn_groups {
+    color: #999;
+}
+.comment_list .comment_update_btn, .comment_list .comment_delete_btn{
+    cursor: pointer;
+}
+.comment_list .content::after, .comment_list .created_at::after, .comment_list .comment_delete_btn::after {
+    clear: both;
+}
