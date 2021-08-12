@@ -16,6 +16,8 @@ SOOKMYUNG LIKELION
   Django 프레임워크와 MTV 디자인 패턴 개념  
   + 과제: Codecademy HTML, CSS 100% 수강 및 Django를 이용한 자기소개 페이지  
    자기소개 페이지 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment03_IntroduceSelf)  
+   
+   https://soeunpage.herokuapp.com/
   
 * 4주차-**랜덤모듈**(5/4)  
   랜덤 모듈을 이용한 로또 프로그램 실습  
@@ -41,14 +43,16 @@ SOOKMYUNG LIKELION
 * 7주차-**아이디어톤 팀 빌딩**(5/25)  
   선정된 아이디어: 1) 질병 검색 서비스, 2) 약속 시간• 장소 추천 서비스, 3) 개발자 취업정보 제공 서비스, 4) 자취 정보 관련 서비스   
   
-  + 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week08/Meet%20Wizard%20%EB%AA%A9%EC%97%85%2C%20%ED%85%8C%EC%9D%B4%EB%B8%94.pdf)  
+  + 과제: 아이디어톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week08/Meet%20Wizard%20%EB%AA%A9%EC%97%85%2C%20%ED%85%8C%EC%9D%B4%EB%B8%94.pdf)  
 
 * 8주차-**bootstrap, static, media**(5/18)    
   static, media를 이용한 정적 파일 관리  
 
   + 과제: 6주차 일기장 과제에 static, media 적용  
-    기능 추가된 일기장 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment08_Diary3)          
-
+    기능 추가된 일기장 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment08_Diary3)         
+    
+    http://soeunkk.pythonanywhere.com/
+  
 * 9주차-**CRUD**      
 
   * 멋사 중앙 아이디어톤      
@@ -57,7 +61,7 @@ SOOKMYUNG LIKELION
 
   * 과제: crud 기능을 구현한 자유 프로젝트     
 
-    음식점 리뷰를 남기는 웹, 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment09_CRUDProject)
+    음식점 리뷰를 남기는 웹 서비스, 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment09_CRUDProject)
 
 * 10주차-**댓글**    
 
@@ -66,3 +70,29 @@ SOOKMYUNG LIKELION
   * 과제2: 댓글 수정/삭제 기능 구현
 
     기능 추가된 테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment10_CRUDProject2)
+  
+* 11주차-**검색, 좋아요, 스크랩**
+
+  쿼리셋, 모델 간 관계 (ManyToOne, ManyToMany)
+
+  * 과제: 좋아요, 스크랩 모아보기 기능 구현
+
+    기능 추가된 테이숙팅[📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment11_CRUDProject3)
+
+    https://taysookting.herokuapp.com/
+
+* 12주차-**소셜로그인**
+
+  구글 소셜 로그인
+
+  - 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week08/Meet%20Wizard%20%EB%AA%A9%EC%97%85%2C%20%ED%85%8C%EC%9D%B4%EB%B8%94.pdf) 
+
+* 13주차-**배포**
+
+  Heroku,PythonAnywhere로 배포
+
+  - 멋사 중앙 해커톤
+
+    https://manna-meetwizard.herokuapp.com/
+
+  ​				
