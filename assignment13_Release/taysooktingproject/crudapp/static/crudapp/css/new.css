@@ -1,0 +1,13 @@
+main form {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+table {
+    width: 50%;
+}
+table label {
+    font-size: 1.1rem;
+}
