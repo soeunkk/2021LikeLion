@@ -17,7 +17,7 @@ SOOKMYUNG LIKELION
   + 과제: Codecademy HTML, CSS 100% 수강 및 Django를 이용한 자기소개 페이지  
    자기소개 페이지 과제물 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment03_IntroduceSelf)  
    
-   https://soeunpage.herokuapp.com/
+    https://soeunpage.herokuapp.com/
   
 * 4주차-**랜덤모듈**(5/4)  
   랜덤 모듈을 이용한 로또 프로그램 실습  
@@ -85,11 +85,19 @@ SOOKMYUNG LIKELION
 
   구글 소셜 로그인
 
-  - 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week08/Meet%20Wizard%20%EB%AA%A9%EC%97%85%2C%20%ED%85%8C%EC%9D%B4%EB%B8%94.pdf) 
+  - 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week12/Meet%20Wizard%20%EC%A4%91%EA%B0%84%EC%A0%90%EA%B2%80.pdf) 
 
 * 13주차-**배포**
 
   Heroku,PythonAnywhere로 배포
+
+  - 과제1: Heroku 배포 
+
+    테이숙팅 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment13_Release/taysooktingproject)
+
+  - 과제2: PythonAnywhere 배포
+
+    일기장 [📎](https://github.com/soeunkk/2021LikeLion/tree/master/assignment13_Release/diaryproject)
 
   - 멋사 중앙 해커톤
 
