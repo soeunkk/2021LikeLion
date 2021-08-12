@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'accounts/css/signup.css' %}"/>
+{% endblock %}
+
+{% block content %}
+<div class="join-page">
+    <div class="form">
+        <form class="register-form" method="POST">
+            {% csrf_token %}
+            <input type="text" name="username" placeholder="name"/>
+            <input type="password" name="password" placeholder="password"/>
+            <input type="text" name="email" placeholder="email address"/>
+            <button type="submit">create</button>
+            <p class="message">Already registered? <a href="{% url 'login' %}">Sign In</a></p>
+        </form>
+    </div>
+</div>
+{% endblock %}
