@@ -1,0 +1,264 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<style type= "text/css">
+    @font-face {
+        font-family: 'HeirofLightBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Cafe24SsurroundAir';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24SsurroundAir.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+    @font-face {
+        font-family: 'Cafe24Ssurround';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    #center.center{
+        margin-top:5%;
+        margin-left: 10%;
+    }
+
+    .schedule .table {
+        opacity : 0.25;
+        background-color: #D9D9D9;
+    }
+
+    .title {
+        display: block;
+        font-family: 'Cafe24Ssurround';
+        font-size: 25px;
+        color: #707070;
+        width: 290px;
+        text-align: center;
+        margin: 0 auto;
+        width: 290px;
+        padding: 0 10 10;
+        border-bottom: 2px solid #707070;
+    }
+
+    #content.content{
+        padding:2%;
+        margin-top:-25%;
+        margin-left: 15%;
+    }
+    
+    .line1, .line2 {
+        margin-left: 335px;
+        margin-top: -5px;
+        background-color: #707070;
+        width: 250px;
+        height: 1px;
+        border:0;
+        
+    }
+
+    .location_keyword{
+        width:300px;
+        font-size: 16px;
+        margin-left: 10%;
+        border-top:none;
+        border-left:none;
+        border-right:none;
+    }
+
+    #search1{
+        margin-top:-3%;
+        margin-left:115%;
+        width: 25px;
+        height: 25px;
+    }
+
+    .addbtn{
+        width: 200px;
+        border-radius: 20px;
+        font-size: 16px;
+        background-color:#8E44AD;
+        color:white;
+        margin-left: 13%;
+    }
+    .addbtn:hover{
+        cursor: pointer;
+        background-color: rgba(142,68,173,0.8);
+    }
+    #api{
+        margin-top:15%;
+        margin-left:15%;
+    }
+
+    #map {
+        padding:1%;
+        width: 30%;
+        height: 50%;
+        margin-top: -15%;
+        margin-left: 50%;
+    }
+</style>
+{% endblock %}
+
+{% block main-content %}
+<main>
+    <div id = "center" class="center">
+        <span class = "title">
+            중간지점을 찾아보세요!
+        </span>
+    </div>
+
+    <div id = "api">
+        <div id="map"></div>
+    </div>
+
+    <div id = "content" class = "content">    
+        <form method="POST" id="form">
+            {% csrf_token %}
+            <!--위치입력-->
+            <div id="myloc" class="loc">
+                <input class="location_keyword" type="text" name="my_address" type="text" placeholder="나의 위치를 검색해주세요" onKeypress="javascript:if(event.keyCode==13) {getPostcode(this.parentNode.id);}"/>
+                <input type="text" class="lat" name="my_lat" value="" style="display:none;"/>
+                <input type="text" class="lng" name="my_lng" value="" style="display:none;"/>
+                <img id="search_btn" src="{% static 'images/search.png' %}" onclick="getPostcode(this.parentNode.id);"/>
+            </div>
+            <br>
+            <div id="freindloc" class="loc">
+                <input class="location_keyword" name="friend_address" type="text" placeholder="친구의 위치를 검색해주세요" onKeypress="javascript:if(event.keyCode==13) {getPostcode(this.parentNode.id);}"/>
+                <input type="text" class="lat" name="friend_lat" value="" style="display:none;"/>
+                <input type="text" class="lng" name="friend_lng" value="" style="display:none;"/>
+                <img id="search_btn" src="{% static 'images/search.png' %}" onclick="getPostcode(this.parentNode.id);"/>
+            </div>
+            <br>
+        </form>
+    </div>
+
+
+    <!--위치 찾을 친구 추가하기-->
+    <input class = "addbtn" type='button' value= "중간지점 구하기" onclick="submit_form()">
+    <img class="userpls" src= "{% static 'images/user-plus.png' %}" alt="Card image cap">
+
+    <!--지도 api-->
+    <form method="POST">
+        <input type="submit" value="MEET!">
+    </form>
+    
+</main>    
+{% endblock %}
+
+{% block js %}
+<script>
+    function submit_form() {
+        myloc = document.getElementById("myloc");
+        freindloc = document.getElementById("freindloc");               
+        if (! myloc.getElementsByClassName("location_keyword")[0].value || ! myloc.getElementsByClassName("lat")[0].value || ! myloc.getElementsByClassName("lng")[0].value || ! freindloc.getElementsByClassName("location_keyword")[0].value || freindloc.getElementsByClassName("lat")[0].value || freindloc.getElementsByClassName("lng")[0].value) {
+                alert("나의 위치와 친구의 위치를 설정해주세요!");
+        }
+        else {
+            document.getElementById('form').submit();
+        }
+    }
+</script>
+
+<!-- 결과값이 있으면 사용자에게 보여주기-->
+{% if result %}
+<script type="text/javascript">
+    myloc = document.getElementById("myloc");
+    myloc.getElementsByClassName("location_keyword")[0].value = {{ my_address }};    //주소 저장
+    myloc.getElementsByClassName("lat")[0].value = {{ my_lat }};    //위도 저장
+    myloc.getElementsByClassName("lng")[0].value = {{ my_lng }};    //경도 저장
+
+    freindloc = document.getElementById("freindloc");               
+    freindloc.getElementsByClassName("location_keyword")[0].value = {{ friend_address }};    //주소 저장
+    freindloc.getElementsByClassName("lat")[0].value = {{ friend_lat }};    //위도 저장
+    freindloc.getElementsByClassName("lng")[0].value = {{ friend_lng }};    //경도 저장
+
+    //중심위치 옮기기
+    changePoint({{ middle_lat }}, {{ middle_lng }});
+
+    //중간지점 핑 찍기
+    registerPoint({{ middle_lat }}, {{ middle_lng }});
+
+    //사용자 핑 찍기
+    registerPoint({{ my_lat }}, {{ my_lng }});
+    registerPoint({{ friend_lat }}, {{ friend_lng }});
+
+</script>
+{% endif %}
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=83649d17ed6ffdbebc59d18cca995938&libraries=services"></script>
+<script>
+    //KAKAO API를 통해 지도 불러오기
+    var container = document.getElementById('map');
+    var options = {
+        center: new kakao.maps.LatLng(37.566439750970886, 126.97800947070422),  //중심점
+        level: 3,    //줌 레벨
+    };
+    var map = new kakao.maps.Map(container, options);
+
+    // 지도에 확대 축소 컨트롤을 생성한다
+    var zoomControl = new kakao.maps.ZoomControl();
+
+    // 지도의 우측에 확대 축소 컨트롤을 추가한다
+    map.addControl(zoomControl, kakao.maps.ControlPosition.RIGHT);
+
+    
+    //마커 지도에 등록하는 함수
+    function registerPoint(lat, long) {
+        marker = new kakao.maps.Marker({
+            map: map,
+            position: new kakao.maps.LatLng(lat, long),
+            image: new kakao.maps.MarkerImage("{% static 'images/marker_icon.png' %}", new kakao.maps.Size(31, 35), new kakao.maps.Point(13, 34)),
+        });
+        marker.setMap(map);
+    }
+
+    //지도의 중심점을 변경하는 함수
+    function changePoint(lat, long) {
+        map.setCenter(new kakao.maps.LatLng(lat, long));
+        map.setLevel(3);
+    }
+
+    //마커의 위치를 변경하는 함수
+    function changeMarker(lat, long) {
+        marker.setPosition(new kakao.maps.LatLng(lat, long));
+    }
+
+    //주소를 통해 위도경도 구하기
+    function getGeofromAddress(id, address) {
+        var geocoder = new kakao.maps.services.Geocoder();
+        geocoder.addressSearch(address, function(result, status) {
+            if (status === kakao.maps.services.Status.OK) {
+                setFormLatLng(id, result[0].y, result[0].x); //[id]에 위도경도 값 저장하기
+                // TODO: form에 저장하는거 문제임(누구껀지 어케앎?)setFormLatLng(result[0].y, result[0].x);//form에 저장
+            }
+        });
+    }
+
+    //form의 latitude와 longitude에 값을 저장하는 함수
+    function setFormLatLng(id, lat, long) {
+        //TODO:form에 저장인데,,, id 지정해주기
+        document.getElementById(id).getElementsByClassName("lat")[0].value = lat; //form에 latitude 저장
+        document.getElementById(id).getElementsByClassName("lng")[0].value = long;//form에 longitude 저장
+    }
+</script>
+
+<script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+<script>
+    //주소를 통해 위도경도 값 구하는 함수
+    function getPostcode(id) {
+        new daum.Postcode({
+            oncomplete: function(data) {
+                document.getElementById(id).getElementsByClassName('location_keyword')[0].value = data.address;    //주소값을 form에 저장하기
+                getGeofromAddress(id, data.address);    //주소를 통해 위도경도 구하기
+            }
+        }).open({
+            q: document.getElementById(id).getElementsByClassName('location_keyword')[0].value  //[id]에 해당하는 사용자가 선택한 주소 가져오기
+        });
+    }
+</script>
+{% endblock %}
+

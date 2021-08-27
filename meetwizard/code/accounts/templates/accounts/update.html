@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+
+
+{% block css %}
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+<style type="text/css">
+    /* main의 margin-left 값은 (.left의 width + 20px) */
+    main {
+        margin-top: 30px;
+        margin-left: 350px;
+    }
+
+    @font-face{   
+        font-family: 'HeirofLightBold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightBold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    main #profile {
+        font-family: 'HeirofLightBold';
+        font-weight: bold;
+    }
+
+    input[type="text"], input[type="email"] {
+        width: 400px;
+    }
+
+    input[type="file"] {
+        width: 230px;
+    }
+
+</style>
+{% endblock %}
+
+{% block main-content %}
+<main>
+<h1 id = "profile">프로필 수정</h1>
+
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    
+    {% bootstrap_form user_change_form %}
+    <input type="submit" value="Submit"/>
+</form>
+
+<a href="{% url 'accounts_delete' %}" class="btn btn-danger">회원탈퇴</a>
+<a href="{% url 'password' %}" class="btn btn-primary">비밀밀호 변경</a>
+</main>
+{% endblock %}
+
+{% block js %}
+<script type="text/javascript"> 
+    //패스워드 폼 가리기
+    document.getElementById("id_password").parentElement.style = "display:none;";
+</script>
+{% endblock %}
