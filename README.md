@@ -85,7 +85,7 @@ SOOKMYUNG LIKELION
 
   구글 소셜 로그인
 
-  - 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week12/Meet%20Wizard%20%EC%A4%91%EA%B0%84%EC%A0%90%EA%B2%80.pdf) 
+  - 과제: 해커톤 중간점검 PPT [📝](https://github.com/soeunkk/2021LikeLion/blob/master/week/week12/Meet%20Wizard%20%EC%A4%91%EA%B0%84%EC%A0%90%EA%B2%80.pdf) 
 
 * 13주차-**배포**
 
